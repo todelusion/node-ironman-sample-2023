@@ -27,6 +27,8 @@ const options = {
   ],
   IsProjectContractor: false,
 };
+
+console.log("options:", options);
 let TradeNo;
 
 router.get("/", (req, res) => {
@@ -51,9 +53,6 @@ router.get("/", (req, res) => {
     ItemName: "測試商品等",
     ReturnURL: `${HOST}/return`,
     ClientBackURL: `${HOST}/clientReturn`,
-    PaymentType: "aio",
-    ChoosePayment: "ALL",
-    EncryptType: "1",
   };
   const create = new ecpay_payment(options);
 
